@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Culturise</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorites">Favorieten</string>
+    <string name="title_settings">Instellingen</string>
+    <string name="title_aotd">Activiteit van de dag!</string>
+
+    <string-array name="cultures">
+        <item>Japan</item>
+        <item>China</item>
+        <item>Italië</item>
+        <item>Spanje</item>
+        <item>Turkije</item>
+        <item>Vietnam</item>
+    </string-array>
+
+    <string-array name="cultures_description">
+        <item>Cultuur van Japan</item>
+        <item>Cultuur van China</item>
+        <item>Cultuur van Italië</item>
+        <item>Cultuur van Spanje</item>
+        <item>Cultuur van Turkije</item>
+        <item>Cultuur van Vietnam</item>
+    </string-array>
+</resources>

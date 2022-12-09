@@ -1,91 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment" >
+    android:layout_height="wrap_content"
+    android:background="#66C7C9BE"
+    android:fillViewport="true"
+    tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/home_aotd_container"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent">
 
         <TextView
-            android:id="@+id/home_aotd_text"
+            android:id="@+id/HomeAotdText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:text="@string/title_aotd"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/home_aotd_button"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/home_aotd_button"
+            android:id="@+id/HomeAotdButton"
             android:layout_width="250dp"
             android:layout_height="100dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
             android:text="@string/title_aotd"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/title_aotd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_aotd_text"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/HomeAotdText" />
+
+        <TextView
+            android:id="@+id/HomeCulturesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_cultures"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HomeAotdButton"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <ImageButton
+            android:id="@+id/HomeChinaButton"
+            android:layout_width="250dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round_corners"
+            android:contentDescription="@string/button_description_china"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_china"
+            app:layout_constraintEnd_toEndOf="@+id/HomeCulturesText"
+            app:layout_constraintStart_toStartOf="@+id/HomeCulturesText"
+            app:layout_constraintTop_toBottomOf="@+id/HomeCulturesText" />
+
+        <ImageButton
+            android:id="@+id/HomeJapanButton"
+            android:layout_width="250dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round_corners"
+            android:contentDescription="@string/button_description_japan"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_japan"
+            app:layout_constraintEnd_toEndOf="@+id/HomeChinaButton"
+            app:layout_constraintStart_toStartOf="@+id/HomeChinaButton"
+            app:layout_constraintTop_toBottomOf="@+id/HomeChinaButton" />
+
+        <ImageButton
+            android:id="@+id/HomeTurkeyButton"
+            android:layout_width="250dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round_corners"
+            android:contentDescription="@string/button_description_turkey"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_turkey"
+            app:layout_constraintEnd_toEndOf="@+id/HomeJapanButton"
+            app:layout_constraintStart_toStartOf="@+id/HomeJapanButton"
+            app:layout_constraintTop_toBottomOf="@+id/HomeJapanButton" />
+
+        <ImageButton
+            android:id="@+id/HomeItalyButton"
+            android:layout_width="250dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round_corners"
+            android:contentDescription="@string/button_description_italy"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_italy"
+            app:layout_constraintEnd_toEndOf="@+id/HomeTurkeyButton"
+            app:layout_constraintStart_toStartOf="@+id/HomeTurkeyButton"
+            app:layout_constraintTop_toBottomOf="@+id/HomeTurkeyButton" />
+
+        <ImageButton
+            android:id="@+id/HomeSpainButton"
+            android:layout_width="250dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/round_corners"
+            android:contentDescription="@string/button_description_spain"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_spain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/HomeItalyButton"
+            app:layout_constraintStart_toStartOf="@+id/HomeItalyButton"
+            app:layout_constraintTop_toBottomOf="@+id/HomeItalyButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_aotd_container"
-        app:layout_constraintVertical_bias="0.501">
+</androidx.core.widget.NestedScrollView>
 
-        <ImageButton
-            android:id="@+id/flagButton0"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/round_corners"
-            android:backgroundTint="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/flag_of_japan"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.505"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/flagButton1"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/round_corners"
-            android:backgroundTint="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/flag_of_china"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.519"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

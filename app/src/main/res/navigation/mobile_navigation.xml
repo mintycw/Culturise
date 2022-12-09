@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_favorites"
-        android:name="com.example.culturise.ui.dashboard.FavoritesFragment"
+        android:name="com.example.culturise.ui.favorites.FavoritesFragment"
         android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_favorites" />
 
     <fragment
         android:id="@+id/navigation_settings"

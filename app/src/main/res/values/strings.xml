@@ -4,6 +4,13 @@
     <string name="title_favorites">Favorieten</string>
     <string name="title_settings">Instellingen</string>
     <string name="title_aotd">Activiteit van de dag!</string>
+    <string name="title_cultures">Culturen</string>
+
+    <string name="button_description_china">Cultuur van China!</string>
+    <string name="button_description_japan">Cultuur van Japan!</string>
+    <string name="button_description_turkey">Cultuur van Turkije!</string>
+    <string name="button_description_italy">Cultuur van Italië!</string>
+    <string name="button_description_spain">Cultuur van Spanje!</string>
 
     <string-array name="cultures">
         <item>Japan</item>

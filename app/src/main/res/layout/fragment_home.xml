@@ -51,72 +51,80 @@
             app:layout_constraintTop_toBottomOf="@+id/HomeAotdButton"
             app:layout_constraintVertical_bias="0.072" />
 
-        <ImageButton
-            android:id="@+id/HomeChinaButton"
-            android:layout_width="250dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/round_corners"
-            android:contentDescription="@string/button_description_china"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_china"
-            app:layout_constraintEnd_toEndOf="@+id/HomeCulturesText"
-            app:layout_constraintStart_toStartOf="@+id/HomeCulturesText"
-            app:layout_constraintTop_toBottomOf="@+id/HomeCulturesText" />
-
-        <ImageButton
-            android:id="@+id/HomeJapanButton"
-            android:layout_width="250dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/round_corners"
-            android:contentDescription="@string/button_description_japan"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_japan"
-            app:layout_constraintEnd_toEndOf="@+id/HomeChinaButton"
-            app:layout_constraintStart_toStartOf="@+id/HomeChinaButton"
-            app:layout_constraintTop_toBottomOf="@+id/HomeChinaButton" />
-
-        <ImageButton
-            android:id="@+id/HomeTurkeyButton"
-            android:layout_width="250dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/round_corners"
-            android:contentDescription="@string/button_description_turkey"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_turkey"
-            app:layout_constraintEnd_toEndOf="@+id/HomeJapanButton"
-            app:layout_constraintStart_toStartOf="@+id/HomeJapanButton"
-            app:layout_constraintTop_toBottomOf="@+id/HomeJapanButton" />
-
-        <ImageButton
-            android:id="@+id/HomeItalyButton"
-            android:layout_width="250dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/round_corners"
-            android:contentDescription="@string/button_description_italy"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_italy"
-            app:layout_constraintEnd_toEndOf="@+id/HomeTurkeyButton"
-            app:layout_constraintStart_toStartOf="@+id/HomeTurkeyButton"
-            app:layout_constraintTop_toBottomOf="@+id/HomeTurkeyButton" />
-
-        <ImageButton
-            android:id="@+id/HomeSpainButton"
-            android:layout_width="250dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/round_corners"
-            android:contentDescription="@string/button_description_spain"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_spain"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/FlagRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/HomeItalyButton"
-            app:layout_constraintStart_toStartOf="@+id/HomeItalyButton"
-            app:layout_constraintTop_toBottomOf="@+id/HomeItalyButton" />
+            app:layout_constraintTop_toBottomOf="@+id/HomeCulturesText"
+            tools:layout_editor_absoluteX="-16dp" />
+
+        <!--        <ImageButton-->
+<!--            android:id="@+id/HomeChinaButton"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="175dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:background="@drawable/round_corners"-->
+<!--            android:contentDescription="@string/button_description_china"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/flag_china"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/HomeCulturesText"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/HomeCulturesText"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/HomeCulturesText" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/HomeJapanButton"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="175dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:background="@drawable/round_corners"-->
+<!--            android:contentDescription="@string/button_description_japan"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/flag_japan"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/HomeChinaButton"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/HomeChinaButton"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/HomeChinaButton" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/HomeTurkeyButton"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="175dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:background="@drawable/round_corners"-->
+<!--            android:contentDescription="@string/button_description_turkey"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/flag_turkey"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/HomeJapanButton"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/HomeJapanButton"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/HomeJapanButton" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/HomeItalyButton"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="175dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:background="@drawable/round_corners"-->
+<!--            android:contentDescription="@string/button_description_italy"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/flag_italy"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/HomeTurkeyButton"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/HomeTurkeyButton"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/HomeTurkeyButton" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/HomeSpainButton"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="175dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:layout_marginBottom="32dp"-->
+<!--            android:background="@drawable/round_corners"-->
+<!--            android:contentDescription="@string/button_description_spain"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/flag_spain"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/HomeItalyButton"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/HomeItalyButton"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/HomeItalyButton" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

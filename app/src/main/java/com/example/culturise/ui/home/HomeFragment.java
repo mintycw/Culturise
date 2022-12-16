@@ -36,16 +36,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        ImageButton buttonChina = (ImageButton) getView().findViewById(R.id.HomeChinaButton);
-        buttonChina.setOnClickListener(this);
-        ImageButton buttonJapan = (ImageButton) getView().findViewById(R.id.HomeJapanButton);
-        buttonJapan.setOnClickListener(this);
-        ImageButton buttonTurkey = (ImageButton) getView().findViewById(R.id.HomeTurkeyButton);
-        buttonTurkey.setOnClickListener(this);
-        ImageButton buttonItaly = (ImageButton) getView().findViewById(R.id.HomeItalyButton);
-        buttonItaly.setOnClickListener(this);
-        ImageButton buttonSpain = (ImageButton) getView().findViewById(R.id.HomeSpainButton);
-        buttonSpain.setOnClickListener(this);
+//        ImageButton buttonChina = (ImageButton) getView().findViewById(R.id.HomeChinaButton);
+//        buttonChina.setOnClickListener(this);
+//        ImageButton buttonJapan = (ImageButton) getView().findViewById(R.id.HomeJapanButton);
+//        buttonJapan.setOnClickListener(this);
+//        ImageButton buttonTurkey = (ImageButton) getView().findViewById(R.id.HomeTurkeyButton);
+//        buttonTurkey.setOnClickListener(this);
+//        ImageButton buttonItaly = (ImageButton) getView().findViewById(R.id.HomeItalyButton);
+//        buttonItaly.setOnClickListener(this);
+//        ImageButton buttonSpain = (ImageButton) getView().findViewById(R.id.HomeSpainButton);
+//        buttonSpain.setOnClickListener(this);
 
     }
 
@@ -59,18 +59,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         Intent intent = new Intent(getActivity(), Activities.class);
         startActivity(intent);
-        switch (view.getId()) {
-            case R.id.HomeChinaButton:
-                intent.putExtra("culture" ,"china");
-                intent.putExtra("title" ,"Chinese Activiteiten");
-                startActivity(intent);
-                break;
-            case R.id.HomeJapanButton:
-                intent.putExtra("culture" ,"japan");
-                intent.putExtra("title" ,"Japanse Activiteiten");
-                startActivity(intent);
-                break;
-        }
+//        switch (view.getId()) {
+//            case R.id.HomeChinaButton:
+////                intent.putExtra("culture" ,"china");
+////                intent.putExtra("title" ,"Chinese Activiteiten");
+//                intent.putExtra("index", 1);
+//                startActivity(intent);
+//                break;
+//            case R.id.HomeJapanButton:
+//                intent.putExtra("culture" ,"japan");
+//                intent.putExtra("title" ,"Japanse Activiteiten");
+//                startActivity(intent);
+//                break;
+//        }
     }
 }
 

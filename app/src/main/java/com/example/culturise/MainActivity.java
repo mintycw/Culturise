@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -14,8 +16,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-//import androidx.recyclerview.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.culturise.databinding.ActivityMainBinding;
 
@@ -23,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding m_Binding;
     private Button m_ActivityOfTheDayButton;
+
+    RecyclerView flagRecycler;
+
+    String cultures[];
+    int images[] = {R.drawable.flag_china, R.drawable.flag_japan, R.drawable.flag_turkey, R.drawable.flag_italy, R.drawable.flag_spain};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
         buttonEventListener();
         showBottomNav();
+
+        flagRecycler = findViewById(R.id.FlagRecyclerView);
+
+        cultures = getResources().getStringArray(R.array.cultures);
+
+        FlagAdapter flagAdapter = new FlagAdapter(this, cultures, images);
+        flagRecycler.setAdapter(flagAdapter);
+        flagRecycler.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
     private void buttonEventListener() {

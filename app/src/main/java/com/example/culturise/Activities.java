@@ -2,34 +2,60 @@ package com.example.culturise;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;;import java.util.ArrayList;
 
 public class Activities extends AppCompatActivity {
 
-//    Bundle extras = getIntent().getExtras();
-//    private String m_Culture = getIntent().getStringExtra("culture");
-//    private String m_Title = getIntent().getStringExtra("title");
+    private String m_Title = "Country";
+
+    private ArrayList<Activity> activityList;
+    private RecyclerView recyclerView;
+
+    String culture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        if (extras != null) {
-//            String m_Title = extras.getString("title");
-//        }
-
         setContentView(R.layout.activity_activities);
-//        switch (m_Layout) {
-//            case "china":
-//                setContentView(R.layout.activity_activities);
-//                break;
-//            case "japan":
-//                setContentView(R.layout.fragment_activities_china);
-//                break;
-//        }
-//        getSupportActionBar().setTitle(m_Title);
-        getSupportActionBar().setTitle("test");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        recyclerView = findViewById(R.id.activitiesRecyclerView);
+        activityList = new ArrayList<>();
+
+        getData();
+        setData();
+
+        setUserInfo();
+        SetAdapter();
+    }
+
+    private void getData() {
+        if (getIntent().hasExtra("culture")) {
+            culture = getIntent().getStringExtra("culture");
+        }
+    }
+
+    private void setData() {
+        getSupportActionBar().setTitle(culture);
+
+    }
+
+    private void SetAdapter() {
+        recyclerAdapter adapter = new recyclerAdapter(activityList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void setUserInfo() {
+        activityList.add(new Activity("Restuaranten"));
+        activityList.add(new Activity("Winkels"));
+        activityList.add(new Activity("Cursussen"));
     }
 }
 
